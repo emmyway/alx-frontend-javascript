@@ -1,9 +1,21 @@
 // the holberton class
 class HolbertonCourse() {
   constructor(name, length, students) {
-    _name = name;
-    _length = length;
-    _students = students;
+    // type verification
+    if (typeof name !== 'string') {
+      throw new TypeError('name must be a string');
+    }
+    if (typeof length !== 'number') {
+      throw new TypeError('length must be a number');
+    }
+    if (!Array.isArray(student) || !students.every(student => typeof student === 'string')) {
+      throw new TypeError('students must be a string');
+    }
+
+    //attribute storage
+    this._name = name;
+    this._length = length;
+    this._students = students;
   }
 
   // the getter method for name
@@ -12,34 +24,36 @@ class HolbertonCourse() {
   }
 
   // the setter method for name
-  set name(name) {
-    this._name = name;
+  set name(value) {
+    if (typeof value !== 'string') {
+      throw new TypeError('name must be a string');
+    }
+    this._name = value;
   }
 
   // the getter method for length
-  get lengtj() {
-    return this._name;
+  get length() {
+    return this._length;
 
-  // the setter method for name
-  set name(name) {
-    this._name = name;
-  }
+  // the setter method for length
+  set length(value) {
+      if (typeof value !== 'number') {
+        throw new TypeError('length must be a number');
+      }
+      this._length = value;
+    }
 
-  // the getter method for name
-  get name() {
-    return this._name;
-  }
+  // the getter method for students
+  get students() {
+      return this._students;
+    }
 
   // the setter method for student
-  set name(name) {
-    this._name = name;
+  set students(value) {
+      if (!Array.isArray(student) || !students.every(student => typeof student === 'string')) {
+        throw new TypeError('students must be a string');
+      }
+      this._students = value;
+    }
   }
-}
 
-Constructor attributes:
-name (String)
-length (Number)
-students (array of Strings)
-Make sure to verify the type of attributes during object creation
-Each attribute must be stored in an “underscore” attribute version (ex: name is stored in _name)
-Implement a getter and setter for each attribute.
