@@ -1,0 +1,6 @@
+*.swp
+babel.config.js
+node_modules
+package.json
+.eslintrc.js
+package-lock.json
