@@ -6,3 +6,18 @@ interface Teacher {
   location: string;
   [property: string]: string;
 }
+
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+
+// fxn accepts two arguments and return string
+function printTeacher (firstName, lastName) {
+  return `${firstName[0]}. ${lastName}`
+}
+
+interface printTeacherFunction: string {
+  firstName: string;
+  lastName: string;
+}
