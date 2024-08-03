@@ -1,4 +1,4 @@
-const updateStudentGradeByCity = (students, city, newGrades) => {
+export default const updateStudentGradeByCity = (students, city, newGrades) => {
   // Check if the arguments are valid
   if (!Array.isArray(students) || !Array.isArray(newGrades) || typeof city !== 'string') {
     return [];

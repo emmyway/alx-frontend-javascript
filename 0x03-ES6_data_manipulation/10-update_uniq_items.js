@@ -1,4 +1,4 @@
-const updateUniqueItems = (map) => {
+export default const updateUniqueItems = (map) => {
   // Check if the argument is a Map
   if (!(map instanceof Map)) {
     throw new Error('Cannot process');

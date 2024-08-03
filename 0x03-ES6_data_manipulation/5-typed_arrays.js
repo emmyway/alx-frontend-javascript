@@ -1,4 +1,4 @@
-const createInt8TypedArray = (length, position, value) => {
+export default const createInt8TypedArray = (length, position, value) => {
   // Check if position is within the bounds of the array
   if (position < 0 || position >= length) {
     throw new Error('Position outside range');

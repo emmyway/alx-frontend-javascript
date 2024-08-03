@@ -1,5 +1,5 @@
 import "./0-get_list_students"
-function getListStudentIds(arrObj) {
+export default function getListStudentIds(arrObj) {
   if (!Array.isArray(arrObj)) {
     return [];
   } else {

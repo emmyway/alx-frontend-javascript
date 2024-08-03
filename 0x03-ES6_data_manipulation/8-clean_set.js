@@ -1,4 +1,4 @@
-const cleanSet = (set, startString) => {
+export default const cleanSet = (set, startString) => {
   // Check if the first argument is a Set and the second argument is a String
   if (!(set instanceof Set) || typeof startString !== 'string') {
     throw new Error('Invalid arguments: expected a Set and a String');
